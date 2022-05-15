@@ -1,0 +1,6 @@
+.active-item,
+.sidebar-item:hover {
+  border-left: 4px solid #1875f0;
+  background-color: rgba(24, 117, 240, 0.1);
+  cursor: pointer;
+}
