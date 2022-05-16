@@ -5,8 +5,8 @@ import PaymentTable from "./paymentTable";
 
 export default function Content() {
   return (
-    <div>
-      <div className="flex pt-[33px] pb-[27px] pl-[30px]">
+    <div className="">
+      <div className="flex flex-col sm:flex-row pt-[33px] pb-[27px] pl-[30px]">
         <ChartWidget title="Daily Transaction Volume" value="2,342" />
         <ChartWidget title="Daily Transaction Value" value="₦4,000,000" />
         <ChartWidget title="Total Transaction Volume" value="452,000" />
