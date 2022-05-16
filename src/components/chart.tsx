@@ -21,13 +21,13 @@ export default function ChartComponent() {
     setData(entryData);
   }, [getChartData]);
   return (
-    <div>
+    <div className="xl:w-[62px] xl:h-[37px]">
       <Chart
         chartType="AreaChart"
         data={data}
         options={options}
-        width="62px"
-        height="37px"
+        width="100%"
+        height="100%"
       />
     </div>
   );

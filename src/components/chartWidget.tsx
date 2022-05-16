@@ -9,7 +9,9 @@ export default function ChartWidget({ title, value }: any) {
         <span className="block text-lg">{value}</span>
       </div>
 
-      <ChartComponent />
+      <div className="">
+        <ChartComponent />
+      </div>
     </div>
   );
 }
