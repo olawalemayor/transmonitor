@@ -8,21 +8,31 @@ export default function OrderWidget() {
     <div className="flex w-full shadow-sm">
       <div className="w-[65%] bg-white pl-[34px] pt-[26px]">
         <div className="flex w-full justify-between">
-          <div>
+          <div className="w-3/5">
             <span className="text-lg font-bold">
               Today : {today.toDateString()}
             </span>
           </div>
 
-          <div>
-            <input type="month" name="month" id="month" className="mr-4" />
+          <div className="w-2/5 flex justify-between items-center">
+            <select
+              name="month"
+              id="month"
+              className="text-xs text-[#7F8FA4] border border-[#DDE0E3] p-[10px] rounded-md"
+            >
+              <option value="janjun" className="text-xs text-[#7F8FA4]">
+                1 Jan - 1 Jun
+              </option>
+            </select>
 
-            <button className="bg-[#CCCFD4] h-[22.97px] w-[29.36px] border mx-2 rounded">
-              {"<"}
-            </button>
-            <button className="bg-[#CCCFD4] h-[22.97px] w-[29.36px] border mx-2 rounded">
-              {">"}
-            </button>
+            <div className="flex w-full justify-center">
+              <button className="text-[#CCCFD4] h-[22.97px] w-[29.36px] border border-[#CCCFD4] rounded mx-2 flex items-center justify-center">
+                {"<"}
+              </button>
+              <button className="text-[#CCCFD4] h-[22.97px] w-[29.36px] border border-[#CCCFD4] rounded mx-2 flex items-center justify-center">
+                {">"}
+              </button>
+            </div>
           </div>
         </div>
         <DateChart />
