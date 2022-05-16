@@ -1,6 +1,7 @@
 import React from "react";
 import ChartWidget from "./chartWidget";
 import OrderWidget from "./orderWidget";
+import PaymentTable from "./paymentTable";
 
 export default function Content() {
   return (
@@ -15,7 +16,8 @@ export default function Content() {
         <OrderWidget />
       </div>
 
-      <h3 className="pl-[30px] text-4xl">Payments</h3>
+      <h3 className="pl-[30px] text-4xl mb-5">Payments</h3>
+      <PaymentTable />
     </div>
   );
 }
