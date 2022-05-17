@@ -19,7 +19,7 @@ function App() {
       </header>
       <div className=" lg:flex segoe overflow-scroll mt-14">
         {isVisible && (
-          <div className="w-full lg:w-[260px] lg:block">
+          <div className="w-full lg:max-w-[260px] lg:block">
             <div className="z-20 fixed h-full w-full md:w-1/2 lg:w-[260px] slide-in-left">
               <Sidebar />
             </div>
