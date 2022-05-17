@@ -21,7 +21,7 @@ export default function ChartComponent() {
     setData(entryData);
   }, [getChartData]);
   return (
-    <div className="xl:w-[62px] xl:h-[37px]">
+    <div className="sm:w-full xl:w-[62px] xl:h-[37px]">
       <Chart
         chartType="AreaChart"
         data={data}

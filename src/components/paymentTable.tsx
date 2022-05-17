@@ -17,7 +17,7 @@ export default function PaymentTable() {
 
   return (
     <div className="max-w-[1068px] pb-[40px]">
-      <div className="flex items-center mb-[26px]">
+      <div className="flex items-center mb-[26px] flex-col lg:flex-row">
         <div className="text-[13px] pr-[57px]">
           Showing{" "}
           <select
@@ -34,7 +34,7 @@ export default function PaymentTable() {
           out of 500 payments
         </div>
 
-        <div className="flex justify-between w-[50%]">
+        <div className="flex flex-col lg:flex-row justify-between lg:w-[50%]">
           <div className="border-b border-black w-full">
             <button>
               <img src={searchIcon} alt="search" />
@@ -66,40 +66,44 @@ export default function PaymentTable() {
           </div>
         </div>
       </div>
-      <div className="pl-[30px]">
-        <TableHeader tableHeadings={tableHeadings} />
-        {tableData.map(
-          ({ displayName, name, price, status, time, transactionNo }) => (
-            <TableRow
-              key={Math.random()}
-              displayName={displayName}
-              name={name}
-              price={price}
-              status={status}
-              time={time}
-              transactionNo={transactionNo}
-            />
-          )
-        )}
-        <div className="flex justify-between items-center my-[26px]">
-          <div className="text-black">Showing 1 to 10 of 500 entries</div>
-          <div className="flex border border-[#CED0DA]">
-            <button className="text-black px-[10px] py-[5px] border border-[#CED0DA]">
-              Previous
-            </button>
-            <button className="text-white bg-[#1875F0] px-[10px] py-[5px] border border-[#CED0DA]">
-              1
-            </button>
-            <button
-              disabled
-              className="text-[#979797] px-[10px] py-[5px] border border-[#CED0DA]"
-            >
-              2
-            </button>
-            <button className="text-black px-[10px] py-[5px] border border-[#CED0DA]">
-              Next
-            </button>
-          </div>
+
+      <div className="overflow-scroll xl:overflow-hidden">
+        <div className="xl:pl-[30px] w-[1440px] xl:w-auto">
+          <TableHeader tableHeadings={tableHeadings} />
+          {tableData.map(
+            ({ displayName, name, price, status, time, transactionNo }) => (
+              <TableRow
+                key={Math.random()}
+                displayName={displayName}
+                name={name}
+                price={price}
+                status={status}
+                time={time}
+                transactionNo={transactionNo}
+              />
+            )
+          )}
+        </div>
+      </div>
+
+      <div className="flex justify-between items-center px-2 xl:pl-[30px] xl:px-0 my-[26px]">
+        <div className="text-black">Showing 1 to 10 of 500 entries</div>
+        <div className="flex border border-[#CED0DA]">
+          <button className="text-black px-[10px] py-[5px] border border-[#CED0DA]">
+            Previous
+          </button>
+          <button className="text-white bg-[#1875F0] px-[10px] py-[5px] border border-[#CED0DA]">
+            1
+          </button>
+          <button
+            disabled
+            className="text-[#979797] px-[10px] py-[5px] border border-[#CED0DA]"
+          >
+            2
+          </button>
+          <button className="text-black px-[10px] py-[5px] border border-[#CED0DA]">
+            Next
+          </button>
         </div>
       </div>
     </div>

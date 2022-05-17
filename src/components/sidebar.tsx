@@ -19,7 +19,7 @@ const IconBox = ({ icon, text, isActive }: any) => {
 
   return (
     <div className={constantClass + itemClass}>
-      <img src={icon} alt={text} className="xl:pl-[42px]" />
+      <img src={icon} alt={text} className="pl-[42px]" />
       <div className="pl-[14px]">{text}</div>
     </div>
   );
@@ -27,19 +27,19 @@ const IconBox = ({ icon, text, isActive }: any) => {
 
 export default function Sidebar() {
   return (
-    <div className="pt-[33px]">
-      <button className="uppercase text-[12px] font-bold py-[9px] px-[25px] rounded-[30px] bg-[#27AE60] text-white xl:ml-[31px]">
+    <div className="pt-[33px] shadow-md bg-white h-full">
+      <button className="uppercase text-[12px] font-bold py-[9px] px-[25px] rounded-[30px] bg-[#27AE60] text-white ml-[31px]">
         generate invoice
       </button>
 
       <div className="text-[11px] leading-[14.63px] capitalize segoe">
         <div className="pb-[35px]">
-          <h3 className="xl:pl-[42px] py-[14px]">Main</h3>
+          <h3 className="pl-[42px] py-[14px]">Main</h3>
           <IconBox icon={overviewIcon} text="Overview" isActive={true} />
         </div>
 
         <div className="pb-[32px]">
-          <h3 className="xl:pl-[42px] py-[14px]">Payments</h3>
+          <h3 className="pl-[42px] py-[14px]">Payments</h3>
           <IconBox icon={wallet1Icon} text="All Payments" isActive={false} />
           <IconBox
             icon={wallet2Icon}
@@ -59,7 +59,7 @@ export default function Sidebar() {
         </div>
 
         <div>
-          <h3 className="xl:pl-[42px] py-[14px]">Orders</h3>
+          <h3 className="pl-[42px] py-[14px]">Orders</h3>
           <IconBox icon={paperIcon} text="All Orders" isActive={false} />
           <IconBox
             icon={pendingPaperIcon}

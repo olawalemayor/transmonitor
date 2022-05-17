@@ -5,16 +5,16 @@ const today = new Date();
 
 export default function OrderWidget() {
   return (
-    <div className="flex w-full shadow-sm">
-      <div className="w-[65%] bg-white pl-[34px] pt-[26px]">
-        <div className="flex w-full justify-between">
-          <div className="w-3/5">
+    <div className="flex flex-col lg:flex-row w-full shadow-sm px-2 lg:px-0">
+      <div className="lg:w-[65%] bg-white pl-[34px] pt-[26px]">
+        <div className="flex w-full justify-between items-center">
+          <div className="xl:w-3/5">
             <span className="text-lg font-bold">
               Today : {today.toDateString()}
             </span>
           </div>
 
-          <div className="w-2/5 flex justify-between items-center">
+          <div className="xl:w-2/5 flex justify-between items-center">
             <select
               name="month"
               id="month"
@@ -38,8 +38,8 @@ export default function OrderWidget() {
         <DateChart />
       </div>
 
-      <div className="w-[35%]">
-        <div className="shadow-sm mx-0.5 text-sm bg-white px-[25px] py-[21px]">
+      <div className="lg:w-[35%] md:flex md:justify-between lg:block px-0">
+        <div className="shadow-sm lg:mx-0.5 text-sm bg-white px-[25px] py-[21px] my-2 md:w-[49%] lg:w-auto">
           <div className="font-bold pb-3">Orders</div>
           <div className="flex pb-3">
             <div className="bg-[#27AE60] h-1 w-4/5"></div>
@@ -58,7 +58,7 @@ export default function OrderWidget() {
           </div>
         </div>
 
-        <div className="shadow-sm m-0.5 text-sm bg-white px-[25px] py-[21px]">
+        <div className="shadow-sm lg:m-0.5 text-sm bg-white px-[25px] py-[21px] md:w-[49%] my-2 lg:w-auto">
           <div className="font-bold pb-3">Payments</div>
           <div className="flex pb-3">
             <div className="bg-[#27AE60] h-1 w-4/5"></div>

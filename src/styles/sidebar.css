@@ -4,3 +4,16 @@
   background-color: rgba(24, 117, 240, 0.1);
   cursor: pointer;
 }
+
+.slide-in-left {
+  animation: slide-left ease-in 1s;
+}
+
+@keyframes slide-left {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 0;
+  }
+}
